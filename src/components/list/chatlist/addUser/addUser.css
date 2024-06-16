@@ -1,0 +1,125 @@
+.addUser{
+    width: max-content;
+    height: max-content;
+    padding: 30px;
+    background-color: rgba(17, 25, 40, 0.781);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+
+    form{
+        display: flex;
+        gap: 20px;
+
+
+        input{
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: white;
+            color: black;
+        }
+
+        button{
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+    }
+
+    .user{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .detail{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .addUser {
+        padding: 20px; /* Reduce padding for smaller screens */
+        width: 90%; /* Adjust width to fit smaller screens */
+        height: auto; /* Adjust height to fit smaller screens */
+        top: 10px; /* Adjust top position for smaller screens */
+        bottom: 10px; /* Adjust bottom position for smaller screens */
+        left: 10px; /* Adjust left position for smaller screens */
+        right: 10px; /* Adjust right position for smaller screens */
+    }
+
+    form {
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 10px; /* Reduce gap between form elements */
+        
+        input {
+            padding: 15px; /* Adjust padding for smaller screens */
+            font-size: 14px; /* Adjust font size for smaller screens */
+        }
+
+        button {
+            padding: 15px; /* Adjust padding for smaller screens */
+            font-size: 14px; /* Adjust font size for smaller screens */
+        }
+    }
+
+    .user {
+        flex-direction: column; /* Stack user elements vertically */
+        align-items: flex-start; /* Align user elements to the start */
+        gap: 10px; /* Reduce gap between user elements */
+        margin-top: 20px; /* Adjust top margin for smaller screens */
+
+        .detail {
+            flex-direction: column; /* Stack detail elements vertically */
+            align-items: flex-start; /* Align detail elements to the start */
+            gap: 10px; /* Reduce gap between detail elements */
+
+            img {
+                width: 40px; /* Adjust image size for smaller screens */
+                height: 40px; /* Adjust image size for smaller screens */
+            }
+        }
+
+        button {
+            padding: 10px; /* Adjust padding for smaller screens */
+            font-size: 14px; /* Adjust font size for smaller screens */
+            align-self: stretch; /* Make button take full width */
+        }
+    }
+}

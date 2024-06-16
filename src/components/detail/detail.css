@@ -1,0 +1,308 @@
+.detail{
+    flex: 1;
+
+    .user{
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 1px solid #dddddd35;
+
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+    }
+    .info{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+
+    .option{
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img{
+                width: 30px;
+                height: 30px;
+                background-color: rgba(17 25 40 0.3);
+                padding: 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                
+            }
+        }
+        .photos{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+
+            .photoItem{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .photoDetail{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 5px;
+                        object-fit: cover;
+
+                    }
+                    span{
+                        font-size: 14px;
+                        color:lightgray;
+                        font-weight: 300;
+                    }
+
+                }
+                .icon{
+                    width: 30px;
+                    height: 30px;
+                    background-color: rgba(17 25 40 0.3);
+                    padding: 10px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    button{
+        padding: 15px;
+        background-color: rgba(230, 74, 105, 0.553);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+        background-color: rgba(220, 20, 60, 0.796);
+
+            }
+        &.logout{
+            padding: 10px;
+            background-color: #1a73e8;
+        }
+
+        }
+    }
+}
+
+/* @media screen and (min-width: 769px) {
+    .detail {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .detail .user,
+    .detail .info {
+      flex: 1;
+    }
+  }  */
+
+/* Media Query for laptop screens (1024px) */
+@media (max-width: 1024px) {
+    .detail .user {
+        padding: 20px 15px;
+        gap: 10px;
+    }
+
+    .detail .user img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .detail .info {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .detail .info .option .title img {
+        width: 25px;
+        height: 25px;
+        padding: 8px;
+    }
+
+    .detail .info .option .photos {
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .detail .info .option .photos .photoItem .photoDetail img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .detail .info .option .photos .photoItem .photoDetail span {
+        font-size: 12px;
+    }
+
+    .detail .info .option .photos .photoItem .icon {
+        width: 25px;
+        height: 25px;
+        padding: 8px;
+    }
+
+    .detail button {
+        padding: 12px;
+    }
+
+    .detail button.logout {
+        padding: 8px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .detail {
+        .user {
+            padding: 20px 15px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                text-align: center;
+                font-size: 0.9em;
+            }
+        }
+
+        .info {
+            padding: 15px;
+            gap: 15px;
+
+            .option {
+                .title {
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        padding: 8px;
+                    }
+                }
+
+                .photos {
+                    gap: 15px;
+
+                    .photoItem {
+                        .photoDetail {
+                            gap: 15px;
+
+                            img {
+                                width: 35px;
+                                height: 35px;
+                            }
+
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .icon {
+                            width: 25px;
+                            height: 25px;
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                padding: 12px;
+                font-size: 0.9em;
+
+                &.logout {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .detail {
+        .user {
+            padding: 15px 10px;
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            p {
+                font-size: 0.8em;
+            }
+        }
+
+        .info {
+            padding: 10px;
+            gap: 10px;
+
+            .option {
+                .title {
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        padding: 6px;
+                    }
+                }
+
+                .photos {
+                    gap: 10px;
+
+                    .photoItem {
+                        .photoDetail {
+                            gap: 10px;
+
+                            img {
+                                width: 30px;
+                                height: 30px;
+                            }
+
+                            span {
+                                font-size: 10px;
+                            }
+                        }
+
+                        .icon {
+                            width: 20px;
+                            height: 20px;
+                            padding: 6px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                padding: 10px;
+                font-size: 0.8em;
+                width: 94vw;
+                &.logout {
+                    padding: 6px;
+                }
+            }
+        }
+    }
+}
