@@ -82,7 +82,7 @@ const Login = () => {
               });
               toast.success("Account Created! You can login now!")
               await signInWithEmailAndPassword(auth, email, password);
-              window.location.reload(); 
+              
         } catch (error) {
             console.log(error);
             toast.error(error.message)
