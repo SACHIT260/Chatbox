@@ -20,7 +20,6 @@ const Detail = () => {
             console.log('User signed out!');
             fetchUserInfo(null); 
 
-            window.location.href="/login"
             console.log("currentUser",currentUser);
         })
         .catch((error) => {
