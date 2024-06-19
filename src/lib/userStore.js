@@ -25,4 +25,5 @@ export const useUserStore = create((set) => ({
         return({currentUser:null,isLoading:false})
     }
  },
+   setCurrentUser: (user) => set({ currentUser: user }),
 }))
