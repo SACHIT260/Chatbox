@@ -5,12 +5,16 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "fireb
 import { auth, db } from "../../lib/firebase"
 import { collection, doc, getDocs, query, setDoc, where } from "firebase/firestore"
 import upload from "../../lib/upload"
+import { useUserStore } from "../../lib/userStore";
+
 
 const Login = () => {
     const [avatar,setAvatar]=useState({
         file:null,
         url:""
     })
+
+    const {fetchUserInfo}=useUserStore()
 
     const [loading,setLoading]=useState(false);
     const handleAvatar=(e)=>{
@@ -80,8 +84,9 @@ const Login = () => {
               await setDoc(doc(db, "userchats", res.user.uid), {
                 chats:[],
               });
-              toast.success("Account Created! You can login now!")
+              toast.success("Account Created! You are logged now!")
               await signInWithEmailAndPassword(auth, email, password);
+              await fetchUserInfo(res.user.uid);
               
         } catch (error) {
             console.log(error);
