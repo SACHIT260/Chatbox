@@ -10,7 +10,7 @@ import "./detail.css"
 const Detail = () => {
 
     const {chatId,user,isCurrentUserBlocked,isReceiverBlocked,changeBlock}=useChatStore()
-    const {currentUser}=useUserStore()
+    const {currentUser,setCurrentUser}=useUserStore()
     
 
     const { fetchUserInfo } = useUserStore(); 
@@ -19,6 +19,7 @@ const Detail = () => {
         auth.signOut().then(() => {
             console.log('User signed out!');
             fetchUserInfo(null); 
+            setCurrentUser(null);
 
             console.log("currentUser",currentUser);
         })
